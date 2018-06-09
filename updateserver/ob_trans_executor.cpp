@@ -45,7 +45,7 @@ namespace oceanbase
         FakeWriteGuard(SessionMgr& session_mgr):
           session_mgr_(session_mgr), session_descriptor_(INVALID_SESSION_DESCRIPTOR), fake_write_granted_(false)
         {
-          int ret = OB_SUCCESS;
+          int ret = OB_SUCCESS; //test_git
           RWSessionCtx *session_ctx = NULL;
           if (OB_SUCCESS != (ret = session_mgr.begin_session(ST_READ_WRITE, 0, -1, -1, session_descriptor_)))
           {
